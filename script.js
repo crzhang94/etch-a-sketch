@@ -4,13 +4,11 @@ const resize = document.getElementById('resize');
 // Sets default size to 16x16 at start
 let size = 16;
 
-
 // Make a square div
 function makeDiv() {
     const newDiv = document.createElement('div');
     newDiv.classList.add('square');
     grid.appendChild(newDiv);
-
     // Set up "hover effect" so that square changes color when your mouse passes over 
     newDiv.addEventListener('mouseover', () => {
         newDiv.style.backgroundColor = "black";
@@ -33,7 +31,11 @@ const squares = document.querySelectorAll('.square');
 
 // Prompt user for size input when hitting resize button and creates new grid
 resize.addEventListener('click', () => {
-    size = prompt("Please enter desired number of squares per grid edge:"); 
+    do {
+        size = prompt("Please enter desired number of squares per grid edge (2-100):");
+    } 
+    while (size < 2 || size > 100 || !isFinite(size));
+
     grid.style.gridTemplateColumns = "repeat(" + size + " ,1fr)";
     grid.style.gridTemplateRows = "repeat(" + size + " ,1fr)";
     makeGrid();
@@ -46,8 +48,6 @@ function resetGrid() {
         square.style.backgroundColor = "white";
     })
 }
-
-// Set the limit for user input to a max of 100
 
 
 // Figure out how to set square borders without affecting grid size
