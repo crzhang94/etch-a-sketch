@@ -56,7 +56,3 @@ function resetGrid() {
     })
 }
 
-
-// Figure out how to set square borders without affecting grid size
-
-
