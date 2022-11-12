@@ -27,7 +27,6 @@ function makeGrid() {
 }
 
 makeGrid();
-const squares = document.querySelectorAll('.square');
 
 // Prompt user for size input when hitting resize button and creates new grid
 resize.addEventListener('click', () => {
@@ -38,12 +37,15 @@ resize.addEventListener('click', () => {
 
     grid.style.gridTemplateColumns = "repeat(" + size + " ,1fr)";
     grid.style.gridTemplateRows = "repeat(" + size + " ,1fr)";
-    makeGrid();
+    
     resetGrid();
+    makeGrid();
+    
 })
 
 // Clear the grid
 function resetGrid() {
+    const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
         square.style.backgroundColor = "white";
     })
@@ -51,3 +53,5 @@ function resetGrid() {
 
 
 // Figure out how to set square borders without affecting grid size
+
+
