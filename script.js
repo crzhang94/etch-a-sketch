@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid');
 const resize = document.getElementById('resize');
+const clear = document.getElementById('clear');
 
 // Sets default size to 16x16 at start
 let size = 16;
@@ -41,6 +42,10 @@ resize.addEventListener('click', () => {
     resetGrid();
     makeGrid();
     
+})
+
+clear.addEventListener('click', () => {
+    resetGrid();
 })
 
 // Clear the grid
