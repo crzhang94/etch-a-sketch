@@ -3,7 +3,7 @@
 const grid = document.querySelector('.grid');
 
 
-// STEPS
+
 
 // Create a 16 x 16 grid of square divs
 
@@ -12,6 +12,11 @@ function makeDiv() {
     const newDiv = document.createElement('div');
     newDiv.classList.add('square');
     grid.appendChild(newDiv);
+
+    // Set up "hover effect" so that square changes color when your mouse passes over 
+    newDiv.addEventListener('mouseover', () => {
+        newDiv.style.backgroundColor = "black";
+    })
 }
 
 // Make a grid
@@ -28,7 +33,6 @@ function makeGrid() {
 
 makeGrid();
 
-// Set up a "hover effect" so that squares change color when your mouse passes over them, leaving a pixelated trail
 
 
 // Add a button to the top of the screen that sends a popup asking for number of squares per side fot the new grid (generates in the same TOTAL SPACE as before and replaces old grid)

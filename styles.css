@@ -5,22 +5,12 @@
     height: 800px;
     grid-template-columns: repeat(16,1fr);
     margin: auto;
-    
+    border: 2px solid grey;
 }
 
-
-/*
-.grid {
-    margin: auto;
-    width: 50%;
-    font-size: 0;
-    text-align: center;
-}
-*/
 
 .square {
-    border: 1px solid black;
-
+    border: 1px solid grey;
     /* display: inline-block; */
 }
 
