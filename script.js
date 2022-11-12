@@ -1,9 +1,7 @@
 // DOM Elements
 
 const grid = document.querySelector('.grid');
-
-
-
+const resize = document.getElementById('resize');
 
 // Create a 16 x 16 grid of square divs
 
@@ -33,8 +31,9 @@ function makeGrid() {
 
 makeGrid();
 
-
-
-// Add a button to the top of the screen that sends a popup asking for number of squares per side fot the new grid (generates in the same TOTAL SPACE as before and replaces old grid)
+// Resize button sends a popup asking for user input for grid size
+resize.addEventListener('click', () => {
+    prompt("Please enter desired number of squares per grid edge: _ x _");
+})
 
 // Set the limit for user input to a max of 100
