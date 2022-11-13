@@ -24,7 +24,6 @@ clear.addEventListener('click', () => {
     resetGrid();
 })
 
-
 // Make a square div
 function makeDiv() {
     const newDiv = document.createElement('div');
