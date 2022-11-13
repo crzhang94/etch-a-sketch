@@ -3,6 +3,8 @@ Etch-a-sketch game created with HTML/CSS/JS as part of The Odin Project curricul
 
 Work in progress
 
+Live preview link: https://crzhang94.github.io/etch-a-sketch/
+
 Approximate time spent:
 -6 hours
 
