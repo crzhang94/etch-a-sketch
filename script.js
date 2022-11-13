@@ -1,9 +1,19 @@
 const grid = document.querySelector('.grid');
+
+const slider = document.getElementById('grid-slider');
+const gridSize = document.getElementById('grid-size');
+
 const resize = document.getElementById('resize');
 const erase = document.getElementById('erase');
 
 // Sets default size to 16x16 at start
 let size = 16;
+
+// Output slider value to size display
+gridSize.innerHTML = slider.value + " x " + slider.value;
+slider.oninput = function() {
+    gridSize.innerHTML = this.value + " x " + this.value;
+}
 
 // Make a square div
 function makeDiv() {
