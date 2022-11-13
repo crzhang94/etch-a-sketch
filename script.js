@@ -2,7 +2,8 @@
 const grid = document.querySelector('.grid');
 const slider = document.getElementById('grid-slider');
 const gridSize = document.getElementById('grid-size');
-const erase = document.getElementById('erase');
+const clear = document.getElementById('clear');
+const color = document.getElementById('brush-color');
 
 // Make initial grid
 makeGrid();
@@ -18,19 +19,21 @@ slider.oninput = function() {
     makeGrid();
 }
 
-// Clear grid when user hits erase button
-erase.addEventListener('click', () => {
+// Clear grid when user hits clear button
+clear.addEventListener('click', () => {
     resetGrid();
 })
+
 
 // Make a square div
 function makeDiv() {
     const newDiv = document.createElement('div');
     newDiv.classList.add('square');
     grid.appendChild(newDiv);
+    
     // Set up "hover effect" so that square changes color when your mouse passes over 
     newDiv.addEventListener('mouseover', () => {
-        newDiv.style.backgroundColor = "black";
+        newDiv.style.backgroundColor = color.value;
     })
 }
 

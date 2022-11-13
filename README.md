@@ -8,3 +8,4 @@ Skills learned:
 -Utilizing inline block display in CSS to create a grid
 -Basics of CSS Grid 
 -Difference between border and outline in CSS
+-Adding color pickers in HTML

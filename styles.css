@@ -30,10 +30,22 @@ body {
 
 .controls {
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.controls > button {
+#brush-color {
+    width: 100px;
+    height: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buttons > button {
     width: 100px;
     height: 30px;
     font-size: 15px;;
@@ -42,4 +54,8 @@ body {
 .slidecontainer {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    gap: 0px;
 }
+
+
