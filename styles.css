@@ -20,7 +20,7 @@ body {
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
     outline: 3px solid black;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .square {
