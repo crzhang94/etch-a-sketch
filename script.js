@@ -1,19 +1,27 @@
+// DOM Elements
 const grid = document.querySelector('.grid');
-
 const slider = document.getElementById('grid-slider');
 const gridSize = document.getElementById('grid-size');
-
-const resize = document.getElementById('resize');
 const erase = document.getElementById('erase');
 
-// Sets default size to 16x16 at start
-let size = 16;
+// Make initial grid
+makeGrid();
 
-// Output slider value to size display
+// Output slider value to size display and adjust grid size
 gridSize.innerHTML = slider.value + " x " + slider.value;
 slider.oninput = function() {
     gridSize.innerHTML = this.value + " x " + this.value;
+    grid.style.gridTemplateColumns = "repeat(" + slider.value + " ,1fr)";
+    grid.style.gridTemplateRows = "repeat(" + slider.value + " ,1fr)";
+    
+    resetGrid();
+    makeGrid();
 }
+
+// Clear grid when user hits erase button
+erase.addEventListener('click', () => {
+    resetGrid();
+})
 
 // Make a square div
 function makeDiv() {
@@ -29,34 +37,13 @@ function makeDiv() {
 // Make a grid
 function makeGrid() {
     // Go through rows
-    for (i = 0; i < size; i++) {
+    for (i = 0; i < slider.value; i++) {
         // Go through columns
-        for (j = 0; j < size; j++) {
+        for (j = 0; j < slider.value; j++) {
             makeDiv();
         } 
     } 
 }
-
-makeGrid();
-
-// Prompt user for size input when hitting resize button and creates new grid
-resize.addEventListener('click', () => {
-    do {
-        size = prompt("Please enter desired number of squares per grid edge (2-100):");
-    } 
-    while (size < 2 || size > 100 || !isFinite(size));
-
-    grid.style.gridTemplateColumns = "repeat(" + size + " ,1fr)";
-    grid.style.gridTemplateRows = "repeat(" + size + " ,1fr)";
-    
-    resetGrid();
-    makeGrid();
-    
-})
-
-erase.addEventListener('click', () => {
-    resetGrid();
-})
 
 // Clear the grid
 function resetGrid() {

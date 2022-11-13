@@ -38,3 +38,8 @@ body {
     height: 30px;
     font-size: 15px;;
 }
+
+.slidecontainer {
+    display: flex;
+    flex-direction: column;
+}
