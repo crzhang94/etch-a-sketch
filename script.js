@@ -5,11 +5,12 @@ const gridSize = document.getElementById('grid-size');
 const clear = document.getElementById('clear');
 const color = document.getElementById('brush-color');
 
-// Make initial grid
+// Make default starting grid
 makeGrid();
+grid.style.gridTemplateColumns = "repeat(" + slider.value + " ,1fr)";
+gridSize.innerHTML = slider.value + " x " + slider.value;
 
 // Output slider value to size display and adjust grid size
-gridSize.innerHTML = slider.value + " x " + slider.value;
 slider.oninput = function() {
     gridSize.innerHTML = this.value + " x " + this.value;
     grid.style.gridTemplateColumns = "repeat(" + slider.value + " ,1fr)";
