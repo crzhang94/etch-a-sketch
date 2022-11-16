@@ -1,5 +1,5 @@
 # Etch-a-sketch
-Etch-a-sketch game created with HTML/CSS/JS as part of The Odin Project curriculum.
+Etch-a-sketch game created with HTML/CSS/JS as part of The Odin Project's Foundations curriculum.
 
 Live preview link: https://crzhang94.github.io/etch-a-sketch/
 
